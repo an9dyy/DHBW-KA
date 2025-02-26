@@ -79,6 +79,30 @@
       animation: fadeInUp 1.5s ease-out;
     }
 
+    /* Button */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .image-button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-button:hover {
+      background-color: var(--secondary-color);
+      transform: scale(1.05);
+    }
+
     /* Video */
     video {
       max-width: 100%;
@@ -92,47 +116,6 @@
       transform: scale(1.03);
     }
 
-    /* Grid Layout für Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .card h3 {
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-
-    .card p {
-      margin-bottom: 1rem;
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform var(--transition-speed);
-    }
-
-    .card img:hover {
-      transform: scale(1.05);
-    }
-
     /* Footer */
     footer {
       background-color: var(--dark-bg);
@@ -142,7 +125,6 @@
       margin-top: 2rem;
     }
 
-    /* Animation */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -151,16 +133,6 @@
       to {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    /* Responsive Anpassungen */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p, nav a {
-        font-size: 1rem;
       }
     }
   </style>
@@ -182,25 +154,19 @@
       <source src="elektrotechnik_intro.mp4" type="video/mp4">
       Ihr Browser unterstützt kein Video-Tag.
     </video>
-    <section class="grid">
-      <article class="card">
-        <h3>Moderne Technologien</h3>
-        <p>Von Robotik bis erneuerbare Energien – vielfältige Möglichkeiten.</p>
-        <img src="technology.jpg" alt="Technologische Innovationen">
-      </article>
-      <article class="card">
-        <h3>Karrierechancen</h3>
-        <p>Spannende Berufe in Forschung, Industrie und Entwicklung warten auf Sie.</p>
-        <img src="career.jpg" alt="Karrieremöglichkeiten">
-      </article>
-      <article class="card">
-        <h3>Praxisorientiertes Lernen</h3>
-        <p>Labore, Projekte und interaktive Vorlesungen machen das Studium einzigartig.</p>
-        <img src="lab.jpg" alt="Praxisorientiertes Lernen">
-      </article>
-    </section>
+    
+    <div class="button-container">
+      <button class="image-button" onclick="openImage()">Bild anzeigen</button>
+    </div>
+
+    <script>
+      function openImage() {
+        window.open('technology.jpg', '_blank');
+      }
+    </script>
   </main>
-    <p>&copy; 2025 Copyright Calvin777 </p>
+  <footer>
+    <p>&copy; 2025 Copyright Calvin777</p>
   </footer>
 </body>
-</html> 
+</html>

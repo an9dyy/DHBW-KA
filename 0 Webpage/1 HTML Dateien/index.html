@@ -92,24 +92,6 @@
       transform: scale(1.03);
     }
 
-    /* Button */
-    .open-image-btn {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 1rem;
-      transition: background-color var(--transition-speed);
-    }
-
-    .open-image-btn:hover {
-      background-color: var(--secondary-color);
-    }
-
     /* Grid Layout für Cards */
     .grid {
       display: grid;
@@ -182,11 +164,6 @@
       }
     }
   </style>
-  <script>
-    function openImage() {
-      window.open('bild.jpg', '_blank');
-    }
-  </script>
 </head>
 <body>
   <header>
@@ -205,17 +182,25 @@
       <source src="elektrotechnik_intro.mp4" type="video/mp4">
       Ihr Browser unterstützt kein Video-Tag.
     </video>
-    <button class="open-image-btn" onclick="openImage()">Bild öffnen</button>
     <section class="grid">
       <article class="card">
         <h3>Moderne Technologien</h3>
         <p>Von Robotik bis erneuerbare Energien – vielfältige Möglichkeiten.</p>
         <img src="technology.jpg" alt="Technologische Innovationen">
       </article>
+      <article class="card">
+        <h3>Karrierechancen</h3>
+        <p>Spannende Berufe in Forschung, Industrie und Entwicklung warten auf Sie.</p>
+        <img src="career.jpg" alt="Karrieremöglichkeiten">
+      </article>
+      <article class="card">
+        <h3>Praxisorientiertes Lernen</h3>
+        <p>Labore, Projekte und interaktive Vorlesungen machen das Studium einzigartig.</p>
+        <img src="lab.jpg" alt="Praxisorientiertes Lernen">
+      </article>
     </section>
   </main>
-  <footer>
     <p>&copy; 2025 Copyright Calvin777 </p>
   </footer>
 </body>
-</html>
+</html> 

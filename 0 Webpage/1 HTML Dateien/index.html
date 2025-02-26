@@ -79,17 +79,28 @@
       animation: fadeInUp 1.5s ease-out;
     }
 
-    /* Video */
-    video {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: transform var(--transition-speed);
-      margin: 2rem 0;
+    /* Button */
+    .center-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
-    video:hover {
-      transform: scale(1.03);
+    .button {
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+    }
+
+    .button:hover {
+      background-color: var(--secondary-color);
+      transform: scale(1.05);
     }
 
     /* Grid Layout für Cards */
@@ -164,6 +175,11 @@
       }
     }
   </style>
+  <script>
+    function openImage() {
+      window.open("image.jpg", "_blank");
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -182,6 +198,12 @@
       <source src="elektrotechnik_intro.mp4" type="video/mp4">
       Ihr Browser unterstützt kein Video-Tag.
     </video>
+
+    <!-- Neuer Button -->
+    <div class="center-button">
+      <button class="button" onclick="openImage()">Drücke mich, wenn du links bist</button>
+    </div>
+
     <section class="grid">
       <article class="card">
         <h3>Moderne Technologien</h3>
@@ -200,7 +222,8 @@
       </article>
     </section>
   </main>
-    <p>&copy; 2025 Copyright Calvin777 </p>
+  <footer>
+    <p>&copy; 2025 Copyright Calvin777</p>
   </footer>
 </body>
 </html>

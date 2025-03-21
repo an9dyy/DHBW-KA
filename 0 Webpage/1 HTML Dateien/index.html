@@ -80,22 +80,7 @@
     }
 
     /* Button */
-    .button-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
 
-    .image-button {
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 30px;
-      transition: background-color var(--transition-speed), transform var(--transition-speed);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .image-button:hover {
@@ -136,6 +121,11 @@
       }
     }
   </style>
+  <script>
+    function openImage() {
+      window.open("spongebob.jpg", "_blank");
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -154,19 +144,7 @@
       <source src="elektrotechnik_intro.mp4" type="video/mp4">
       Ihr Browser unterstützt kein Video-Tag.
     </video>
-    
-    <div class="button-container">
-      <button class="image-button" onclick="openImage()">Bild anzeigen</button>
-    </div>
 
-    <script>
-      function openImage() {
-        window.open('technology.jpg', '_blank');
-      }
-    </script>
-  </main>
-  <footer>
-    <p>&copy; 2025 Copyright Calvin7777</p>
   </footer>
 </body>
 </html>

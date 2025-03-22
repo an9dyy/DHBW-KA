@@ -31,7 +31,7 @@
       line-height: 1.8;
     }
 
-    a {
+    {
       text-decoration: none;
       transition: color var(--transition-speed);
     }
@@ -80,60 +80,27 @@
     }
 
     /* Button */
-    .center-button {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
+
     }
 
-    .button {
-      background-color: var(--primary-color);
-      color: var(--accent-color);
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color var(--transition-speed), transform var(--transition-speed);
-    }
-
-    .button:hover {
+    .image-button:hover {
       background-color: var(--secondary-color);
       transform: scale(1.05);
     }
 
-    /* Grid Layout für Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
 
-    .card {
-      background: var(--accent-color);
-      padding: 1.5rem;
+    /* Video */
+    video {
+      max-width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform var(--transition-speed);
+      margin: 2rem 0;
     }
 
-    .card h3 {
-      color: var(--primary-color);
-    }
+    video:hover {
+      transform: scale(1.03);
 
-    /* Neuer Abschnitt */
-    .comparison-section {
-      margin-top: 4rem;
-      padding: 2rem;
-      background: var(--dark-bg);
-      color: var(--accent-color);
-      border-radius: 10px;
-    }
-
-    .comparison-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
     }
 
     /* Footer */
@@ -145,10 +112,11 @@
       margin-top: 2rem;
     }
 
+
   </style>
   <script>
     function openImage() {
-      window.open("image.jpg", "_blank");
+      window.open("spongebob.jpg", "_blank");
     }
   </script>
 </head>
@@ -170,39 +138,7 @@
       Ihr Browser unterstützt kein Video-Tag.
     </video>
 
-    <!-- Button -->
-    <div class="center-button">
-      <button class="button" onclick="openImage()">Drücke mich, wenn du links bist</button>
-    </div>
 
-    <!-- Grid-Bereich -->
-    <section class="grid">
-      <article class="card">
-        <h3>Moderne Technologien</h3>
-        <p>Von Robotik bis erneuerbare Energien – vielfältige Möglichkeiten.</p>
-      </article>
-      <article class="card">
-        <h3>Karrierechancen</h3>
-        <p>Spannende Berufe in Forschung, Industrie und Entwicklung warten auf Sie.</p>
-      </article>
-      <article class="card">
-        <h3>Praxisorientiertes Lernen</h3>
-        <p>Labore, Projekte und interaktive Vorlesungen machen das Studium einzigartig.</p>
-      </article>
-    </section>
-
-    <!-- Neuer Abschnitt: Vergleich -->
-    <section class="comparison-section">
-      <h2>Warum Elektrotechnik eine großartige Wahl ist</h2>
-      <p>Während Maschinenbau auf mechanische Prozesse fokussiert und Informatik auf Softwareentwicklung spezialisiert ist, verbindet Elektrotechnik beide Welten. Von der Entwicklung intelligenter Systeme bis hin zur nachhaltigen Energietechnik – Elektrotechnik ist ein zukunftssicherer Studiengang.</p>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Elektrotechnik Hochschule</p>
-    <p><strong>Impressum:</strong> Max Mustermann | Mustermannstraße 1 | 12345 Berlin</p>
   </footer>
 </body>
 </html>

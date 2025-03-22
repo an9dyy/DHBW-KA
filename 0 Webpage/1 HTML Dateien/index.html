@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studium Elektrotechnik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #02478c;
-      --secondary-color: #002244;
-      --accent-color: #ffffff;
-      --bg-color: #f4f4f4;
-      --text-color: #333;
-      --dark-bg: #222;
-      --font-family: 'Arial', sans-serif;
+      --primary-color: #000;
+      --secondary-color: #333;
+      --accent-color: #fff;
+      --bg-color: #f8f8f8;
+      --text-color: #222;
+      --dark-bg: #111;
+      --font-family: 'Playfair Display', serif;
       --transition-speed: 0.3s;
     }
 
@@ -27,10 +28,10 @@
       font-family: var(--font-family);
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
-    a {
+    {
       text-decoration: none;
       transition: color var(--transition-speed);
     }
@@ -38,14 +39,14 @@
     /* Header */
     header {
       background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-      color: #fff;
+      color: var(--accent-color);
       padding: 2rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      font-weight: bold;
     }
 
     header p {
@@ -54,29 +55,28 @@
 
     /* Navigation */
     nav {
-      background-color: var(--primary-color);
+      background-color: var(--dark-bg);
       text-align: center;
       padding: 1rem;
     }
 
     nav a {
-      color: #fff;
-      margin: 0 1rem;
+      color: var(--accent-color);
+      margin: 0 1.5rem;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     nav a:hover {
-      color: var(--accent-color);
+      color: gray;
     }
 
     /* Main Content */
     main.container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 3rem 1rem;
       text-align: center;
-      animation: fadeInUp 1.5s ease-out;
     }
 
     /* Button */
@@ -102,6 +102,7 @@
       background-color: var(--secondary-color);
       transform: scale(1.05);
     }
+
 
     /* Grid Layout für Cards */
     .grid {
@@ -140,20 +141,19 @@
       transition: transform var(--transition-speed);
     }
 
-    .card img:hover {
-      transform: scale(1.05);
+    video:hover {
+      transform: scale(1.03);
     }
 
     /* Footer */
     footer {
       background-color: var(--dark-bg);
-      color: #fff;
+      color: var(--accent-color);
       text-align: center;
       padding: 1.5rem;
       margin-top: 2rem;
     }
 
-    /* Animation */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -162,16 +162,6 @@
       to {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    /* Responsive Anpassungen */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p, nav a {
-        font-size: 1rem;
       }
     }
   </style>
@@ -199,30 +189,6 @@
       Ihr Browser unterstützt kein Video-Tag.
     </video>
 
-    <div class="center-button">
-      <button class="button" onclick="openImage()">Drücke mich</button>
-    </div>
-
-    <section class="grid">
-      <article class="card">
-        <h3>Moderne Technologien</h3>
-        <p>Von Robotik bis erneuerbare Energien – vielfältige Möglichkeiten.</p>
-        <img src="technology.jpg" alt="Technologische Innovationen">
-      </article>
-      <article class="card">
-        <h3>Karrierechancen</h3>
-        <p>Spannende Berufe in Forschung, Industrie und Entwicklung warten auf Sie.</p>
-        <img src="career.jpg" alt="Karrieremöglichkeiten">
-      </article>
-      <article class="card">
-        <h3>Praxisorientiertes Lernen</h3>
-        <p>Labore, Projekte und interaktive Vorlesungen machen das Studium einzigartig.</p>
-        <img src="lab.jpg" alt="Praxisorientiertes Lernen">
-      </article>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Copyright Elektrotechnik</p>
   </footer>
 </body>
 </html>
